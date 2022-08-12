@@ -1,0 +1,57 @@
+input_file_name: 20210711-17h59m44s_timesteps30000_ec3500_em7000
+max_num_veh: 10
+sim_duration_timesteps: 30000
+train_size: 0.8
+batch_size: 64
+Nepochs: 10000
+run_date: 20210807-
+run_time: 14h27m27s
+model: GCN_020
+combo: ('sum', 64, 'Adam', 'MSE', [512], 0.01, 0.6, 0, 'None', True, 'tanh')
+random_seed: 4763498
+save_every: 500
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+use_edges_attr: True
+activation_function: tanh
+shuttle_train_frame: None
+shuttle_val_frame: None
+num_rows_training: 19980
+num_rows_validation: 4496
+num_rows_test: 500
+dateset_train_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_020/DATASETS/20210711-17h59m44s_timesteps30000_ec3500_em7000_19980_IN_data_pos_data_x_OUT_data_y__dataset_01_train.pt
+dateset_val_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_020/DATASETS/20210711-17h59m44s_timesteps30000_ec3500_em7000_19980_IN_data_pos_data_x_OUT_data_y__dataset_02_validation.pt
+dateset_test_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_020/DATASETS/20210711-17h59m44s_timesteps30000_ec3500_em7000_19980_IN_data_pos_data_x_OUT_data_y__dataset_03_test.pt
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 5
+size_output: 3
+model_architecture: HL01_MLP(
+  (actfun): Tanh()
+  (lin1): Linear(in_features=5, out_features=512, bias=True)
+  (lin2): Linear(in_features=512, out_features=3, bias=True)
+)
+hidden_layers_sizes: [512]
+layer_type: GraphConv
+normalization: GraphNorm
+criterion: MSE
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.01
+    weight_decay: 0
+)
+reduction: sum
+scheduler: NoneType
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_020/20210807-14h27m27s/20210807-14h27m27sEPOCH_1104of10000_TRUNC_GCN_020.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_020/20210807-14h27m27s/20210807-14h27m27sEPOCH_1104of10000_TRUNC_TRUNC_training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_020/20210807-14h27m27s/20210807-14h27m27sEPOCH_1104of10000_TRUNC_TRUNC_validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_020/20210807-14h27m27s/20210807-14h27m27sEPOCH_1104of10000_TRUNC_TRUNC_learning_rate.pkl
+final_train_loss: 91980.41180985424
+final_val_loss: 77736.4871808979
+figure_paths: []

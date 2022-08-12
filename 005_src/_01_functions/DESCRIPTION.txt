@@ -1,0 +1,4 @@
+Collection of functions used throughout the code.
+Steps are used in the graph extraction from data.
+
+Different versions of step4 have been developed in time and for specific purposes (eg parse the data containing information regarding the Traffic Lights) 

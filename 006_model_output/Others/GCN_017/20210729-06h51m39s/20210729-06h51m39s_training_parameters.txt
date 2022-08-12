@@ -1,0 +1,147 @@
+input_file_name: df_only_moving_vehicles
+max_num_veh: 10
+sim_duration_timesteps: 10160
+train_size: 0.8
+batch_size: 32
+Nepochs: 500
+run_date: 20210729-
+run_time: 06h51m39s
+model: GCN_017
+combo: ('mean', 128, 'Adam', 'MSE', [64, 128, 256], 0.001, 0.6, 0, 'None', True, 'relu')
+random_seed: 42657
+save_every: 25
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+use_edges_attr: True
+activation_function: relu
+shuttle_train_frame: None
+shuttle_val_frame: None
+num_rows_training: 8128
+num_rows_validation: 1828
+num_rows_test: 204
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 6
+size_output: 2
+model_architecture: HL03_bn(
+  (actfun): ReLU()
+  (conv1): GraphConv(6, 64)
+  (conv2): GraphConv(64, 128)
+  (conv3): GraphConv(128, 256)
+  (conv4): GraphConv(256, 2)
+  (bn1): GraphNorm(64)
+  (bn2): GraphNorm(128)
+  (bn3): GraphNorm(256)
+)
+hidden_layers_sizes: [64, 128, 256]
+layer_type: GraphConv
+normalization: GraphNorm
+criterion: MSE
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    weight_decay: 0
+)
+reduction: mean
+scheduler: NoneType
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/20210729-06h51m39sEPOCH_500of500_FINAL__GCN_017.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/20210729-06h51m39sEPOCH_500of500_FINAL__FINAL__training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/20210729-06h51m39sEPOCH_500of500_FINAL__FINAL__validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/20210729-06h51m39sEPOCH_500of500_FINAL__FINAL__learning_rate.pkl
+final_train_loss: 4.661465331912041
+final_val_loss: 7.16267811457316
+figure_paths: ['/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000025of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000025of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000050of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000050of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000075of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000075of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000100of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000100of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000125of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000125of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000150of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000150of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000175of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000175of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000200of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000200of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000225of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000225of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000250of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000250of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000275of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000275of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000300of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000300of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000325of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000325of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000350of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000350of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000375of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000375of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000400of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000400of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000425of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000425of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000450of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000450of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000475of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000475of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_training_set/20210729-06h51m39sModel_GCN_017_shuttle_train_epoch_000500of500.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210729-06h51m39s/figures_validation_set/20210729-06h51m39sModel_GCN_017_shuttle_val_epoch_000500of500.png']
+input_file_name_002: df_only_moving_vehicles
+train_size_002: 0.8
+batch_size_002: 32
+Nepochs_002: 500
+input_file_name_003: df_only_moving_vehicles
+train_size_003: 0.8
+batch_size_003: 32
+Nepochs_003: 500
+input_file_name_004: df_only_moving_vehicles
+train_size_004: 0.8
+batch_size_004: 32
+Nepochs_004: 500
+input_file_name_005: df_only_moving_vehicles
+train_size_005: 0.8
+batch_size_005: 32
+Nepochs_005: 500
+input_file_name_006: df_only_moving_vehicles
+train_size_006: 0.8
+batch_size_006: 32
+Nepochs_006: 500
+input_file_name_007: df_only_moving_vehicles
+train_size_007: 0.8
+batch_size_007: 32
+Nepochs_007: 500
+input_file_name_008: df_only_moving_vehicles
+train_size_008: 0.8
+batch_size_008: 32
+Nepochs_008: 500
+input_file_name_009: df_only_moving_vehicles
+train_size_009: 0.8
+batch_size_009: 32
+Nepochs_009: 500
+input_file_name_010: df_only_moving_vehicles
+train_size_010: 0.8
+batch_size_010: 32
+Nepochs_010: 500
+input_file_name_011: df_only_moving_vehicles
+train_size_011: 0.8
+batch_size_011: 32
+Nepochs_011: 500
+input_file_name_012: df_only_moving_vehicles
+train_size_012: 0.8
+batch_size_012: 32
+Nepochs_012: 500
+input_file_name_013: df_only_moving_vehicles
+train_size_013: 0.8
+batch_size_013: 32
+Nepochs_013: 500
+input_file_name_014: df_only_moving_vehicles
+train_size_014: 0.8
+batch_size_014: 32
+Nepochs_014: 500
+input_file_name_015: df_only_moving_vehicles
+train_size_015: 0.8
+batch_size_015: 32
+Nepochs_015: 500
+input_file_name_016: df_only_moving_vehicles
+train_size_016: 0.8
+batch_size_016: 32
+Nepochs_016: 500
+input_file_name_017: df_only_moving_vehicles
+train_size_017: 0.8
+batch_size_017: 128
+Nepochs_017: 500
+input_file_name_018: df_only_moving_vehicles
+train_size_018: 0.8
+batch_size_018: 128
+Nepochs_018: 500
+input_file_name_019: df_only_moving_vehicles
+train_size_019: 0.8
+batch_size_019: 128
+Nepochs_019: 500
+input_file_name_020: df_only_moving_vehicles
+train_size_020: 0.8
+batch_size_020: 128
+Nepochs_020: 500
+input_file_name_021: df_only_moving_vehicles
+train_size_021: 0.8
+batch_size_021: 128
+Nepochs_021: 500
+input_file_name_022: df_only_moving_vehicles
+train_size_022: 0.8
+batch_size_022: 128
+Nepochs_022: 500
+input_file_name_023: df_only_moving_vehicles
+train_size_023: 0.8
+batch_size_023: 128
+Nepochs_023: 500

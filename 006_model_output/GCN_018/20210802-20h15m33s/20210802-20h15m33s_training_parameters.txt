@@ -1,0 +1,67 @@
+input_file_name: 20210725-16h24m21s_timesteps200_ec3500_em7000
+max_num_veh: 10
+sim_duration_timesteps: 200
+train_size: 0.8
+batch_size: 512
+Nepochs: 1
+run_date: 20210802-
+run_time: 20h15m33s
+model: GCN_018
+combo: ('sum', 512, 'Adam', 'L1', [64, 128, 256], 0.001, 0.6, 0, 'CosineAnnealingWarmRestarts', False, 'relu')
+random_seed: 4767
+save_every: 1
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+use_edges_attr: False
+activation_function: relu
+shuttle_train_frame: None
+shuttle_val_frame: None
+num_rows_training: 130
+num_rows_validation: 29
+num_rows_test: 4
+dateset_train_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/DATASETS/20210725-16h24m21s_timesteps200_ec3500_em7000_130_IN_data_pos_zc_data_x_rad_still_vehicle_OUT_data_y_delta__dataset_01_train.pt
+dateset_val_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/DATASETS/20210725-16h24m21s_timesteps200_ec3500_em7000_130_IN_data_pos_zc_data_x_rad_still_vehicle_OUT_data_y_delta__dataset_02_validation.pt
+dateset_test_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/DATASETS/20210725-16h24m21s_timesteps200_ec3500_em7000_130_IN_data_pos_zc_data_x_rad_still_vehicle_OUT_data_y_delta__dataset_03_test.pt
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 6
+size_output: 2
+model_architecture: HL03_bn(
+  (actfun): ReLU()
+  (conv1): GraphConv(6, 64)
+  (conv2): GraphConv(64, 128)
+  (conv3): GraphConv(128, 256)
+  (conv4): GraphConv(256, 2)
+  (bn1): GraphNorm(64)
+  (bn2): GraphNorm(128)
+  (bn3): GraphNorm(256)
+)
+hidden_layers_sizes: [64, 128, 256]
+layer_type: GraphConv
+normalization: GraphNorm
+criterion: L1
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.0009755282581475768
+    weight_decay: 0
+)
+reduction: sum
+scheduler: CosineAnnealingWarmRestarts
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/20210802-20h15m33s/20210802-20h15m33sEPOCH_1of1_FINAL__GCN_018.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/20210802-20h15m33s/20210802-20h15m33sEPOCH_1of1_FINAL__FINAL__training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/20210802-20h15m33s/20210802-20h15m33sEPOCH_1of1_FINAL__FINAL__validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/20210802-20h15m33s/20210802-20h15m33sEPOCH_1of1_FINAL__FINAL__learning_rate.pkl
+final_train_loss: 4668.1484375
+final_val_loss: 907.7030029296875
+figure_paths: ['/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/20210802-20h15m33s/figures_training_set/20210802-20h15m33sModel_GCN_018_shuttle_train_epoch_000001of1_78.27621459960938.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/20210802-20h15m33s/figures_training_set/ZOOM/20210802-20h15m33sModel_GCN_018_shuttle_train_epoch_000001of1_ZOOM25.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/20210802-20h15m33s/figures_validation_set/20210802-20h15m33sModel_GCN_018_shuttle_val_epoch_000001of1.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_018/20210802-20h15m33s/figures_validation_set/ZOOM/20210802-20h15m33sModel_GCN_018_shuttle_val_epoch_000001of1_ZOOM25.png']
+input_file_name_002: 20210725-16h24m21s_timesteps200_ec3500_em7000
+train_size_002: 0.8
+batch_size_002: 512
+Nepochs_002: 1

@@ -1,0 +1,14 @@
+## give read,write,execute permissions to another user for a certain directory - ari tested, works
+setfacl -R -m user:<user>:rwx <directory>
+
+## alternative - ari hasnt tested
+>chmod 777 <directory>
+
+## check user permissions for a <file>
+>ls –l <file>
+
+output: filetype, file permission of the user, file permission of group, file permission of others
+filetypes:  regular file (–), a directory (d) or a link (i)
+
+## check permissions of a specific <directory>
+>ls -ld <directory>

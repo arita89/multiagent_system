@@ -1,0 +1,59 @@
+input_file_name: 20210725-16h24m21s_timesteps200_ec3500_em7000
+max_num_veh: 10
+sim_duration_timesteps: 200
+train_size: 0.8
+batch_size: 128
+Nepochs: 20000
+run_date: 20210731-
+run_time: 15h24m53s
+model: GCN_017
+combo: ('mean', 128, 'Adam', 'Custom_Loss_2', [64, 128, 256], 0.0001, 0.6, 0, 'CosineAnnealingWarmRestarts', True, 'relu')
+random_seed: 4267
+save_every: 1000
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+use_edges_attr: True
+activation_function: relu
+shuttle_train_frame: None
+shuttle_val_frame: None
+num_rows_training: 130
+num_rows_validation: 29
+num_rows_test: 4
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 6
+size_output: 2
+model_architecture: HL03_bn(
+  (actfun): ReLU()
+  (conv1): GraphConv(6, 64)
+  (conv2): GraphConv(64, 128)
+  (conv3): GraphConv(128, 256)
+  (conv4): GraphConv(256, 2)
+  (bn1): GraphNorm(64)
+  (bn2): GraphNorm(128)
+  (bn3): GraphNorm(256)
+)
+hidden_layers_sizes: [64, 128, 256]
+layer_type: GraphConv
+normalization: GraphNorm
+criterion: Custom_Loss_2
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.0001
+    lr: 0.0001
+    weight_decay: 0
+)
+reduction: mean
+scheduler: CosineAnnealingWarmRestarts
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210731-15h24m53s/20210731-15h24m53sEPOCH_1000of20000_TEMP__GCN_017.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210731-15h24m53s/20210731-15h24m53sEPOCH_1000of20000_TEMP__TEMP__training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210731-15h24m53s/20210731-15h24m53sEPOCH_1000of20000_TEMP__TEMP__validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210731-15h24m53s/20210731-15h24m53sEPOCH_1000of20000_TEMP__TEMP__learning_rate.pkl
+final_train_loss: 27.91366182007487
+final_val_loss: 24.804348967092878

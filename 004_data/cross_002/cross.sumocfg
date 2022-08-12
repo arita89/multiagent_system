@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Sun 27 Jun 2021 01:01:39 PM CEST by Eclipse SUMO GUI Version 1.4.0
+-->
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/storage/remote/atcremers50/ss21_multiagentcontrol/data/cross_002/cross.net.xml"/>
+        <route-files value="/storage/remote/atcremers50/ss21_multiagentcontrol/data/cross_002/cross.rou.xml"/>
+        <additional-files value="/storage/remote/atcremers50/ss21_multiagentcontrol/data/cross_002/cross.add.xml"/>
+    </input>
+
+</configuration>

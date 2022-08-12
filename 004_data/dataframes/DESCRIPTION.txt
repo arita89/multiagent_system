@@ -1,0 +1,3 @@
+Dataframes with raw data from sumo.
+.zip is the actual data
+.txt has the parameters of the simulation

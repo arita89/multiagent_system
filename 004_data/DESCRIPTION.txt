@@ -1,0 +1,4 @@
+cross*      -> all the files needed to set up the SUMO simulations
+dataframes  -> the collections of raw datasets obtained from the SUMO simulations
+figures     -> various images describing the datasets
+GCN_input   -> data input to the networks 

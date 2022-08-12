@@ -1,0 +1,24 @@
+max_num_veh: 10
+
+date: 20210711-
+time: 17h55m36s
+usr: /usr/prakt/s0014
+env: /usr/prakt/s0014/anaconda3/envs/carla_sumo_env
+
+sim_duration_timesteps: 30500
+sim_duration_actualseconds: 110.9221179485321
+
+savestat: True
+plotstat: True
+
+conf_ID: 013
+conf_file: ../004_data/cross_013/cross.sumocfg
+conf_file: ../004_data/cross_013/cross.rou.xml
+      routes.flow.id: flow1
+      routes.flow.begin: 0
+      routes.flow.end: 30000
+      routes.flow.probability: 0.15
+      routes.flow.route: routedist13
+
+path_figure: ../004_data/figures/plots_data/000012_veh_per_timestep.png
+path_df: ../004_data/dataframes/df_sim_000012.zip

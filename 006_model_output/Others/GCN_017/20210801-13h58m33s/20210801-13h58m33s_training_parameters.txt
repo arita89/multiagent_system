@@ -1,0 +1,59 @@
+input_file_name: 20210801-08h53m15s_timesteps50000_ec3500_em7000
+max_num_veh: 5
+sim_duration_timesteps: 50000
+train_size: 0.8
+batch_size: 512
+Nepochs: 5000
+run_date: 20210801-
+run_time: 13h58m33s
+model: GCN_017
+combo: ('sum', 512, 'Adam', 'L1', [64, 128, 256], 0.01, 0.6, 0, 'CosineAnnealingWarmRestarts', True, 'leakyrelu')
+random_seed: 4265767
+save_every: 250
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+use_edges_attr: True
+activation_function: leakyrelu
+shuttle_train_frame: 603
+shuttle_val_frame: 12404
+num_rows_training: 25664
+num_rows_validation: 5775
+num_rows_test: 642
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 4
+size_output: 2
+model_architecture: HL03_bn(
+  (actfun): LeakyReLU(negative_slope=0.01)
+  (conv1): GraphConv(4, 64)
+  (conv2): GraphConv(64, 128)
+  (conv3): GraphConv(128, 256)
+  (conv4): GraphConv(256, 2)
+  (bn1): GraphNorm(64)
+  (bn2): GraphNorm(128)
+  (bn3): GraphNorm(256)
+)
+hidden_layers_sizes: [64, 128, 256]
+layer_type: GraphConv
+normalization: GraphNorm
+criterion: L1
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.01
+    lr: 0.00015101531982495144
+    weight_decay: 0
+)
+reduction: sum
+scheduler: CosineAnnealingWarmRestarts
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210801-13h58m33s/20210801-13h58m33sEPOCH_2000of5000_TEMP__GCN_017.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210801-13h58m33s/20210801-13h58m33sEPOCH_2000of5000_TEMP__TEMP__training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210801-13h58m33s/20210801-13h58m33sEPOCH_2000of5000_TEMP__TEMP__validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_017/20210801-13h58m33s/20210801-13h58m33sEPOCH_2000of5000_TEMP__TEMP__learning_rate.pkl
+final_train_loss: 3145.5345985562194
+final_val_loss: 4926.8700764973955

@@ -1,0 +1,4 @@
+All the parsed data used as input to train the networks.
+
+.pkl -> actual data
+.txt -> info about the parameters, e.g original data frame and duration of the sim

@@ -1,0 +1,25 @@
+run_time: 17h55m10s
+model: GCN_004
+random_seed: 42
+train_size: 0.9
+batch_size: 100
+Nepochs: 100
+save_every: 50
+transformstat: False
+plotstat: True
+printstat: True
+input_file_name: 20210710-13h21m45s_timesteps15000_ec3500_em7000
+num_rows_training: 9094
+num_rows_validation: 909
+num_rows_test: 102
+exclude_yaw: True
+concatenatestat: True
+paddingstat: False
+size_input: [(100, 5)]
+size_output: [(100, 2)]
+model_architecture: GCN(
+  (conv1): GCNConv(5, 16)
+  (conv2): GCNConv(16, 32)
+  (conv3): GCNConv(32, 2)
+)
+tloss_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_004/20210710-17h55m10s/20210710-17h55m10s100_FINAL_training_loss

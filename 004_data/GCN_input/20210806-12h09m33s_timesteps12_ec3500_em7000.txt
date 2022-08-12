@@ -1,0 +1,21 @@
+max_num_veh: 5
+date: 20210806-
+time: 12h09m33s
+usr: /usr/prakt/s0017
+env: /usr/prakt/s0017/miniconda3/envs/local_env_GCN_two
+
+path_input_df: /storage/remote/atcremers50/ss21_multiagentcontrol/004_data/dataframes/df_sim_000023.zip
+info_input_df: /storage/remote/atcremers50/ss21_multiagentcontrol/004_data/dataframes/df_sim_000023.txt
+
+sim_duration_timesteps: 12
+edge_creation_radius: 3500
+edge_maintenance_radius: 7000
+edge_weights_option: 3
+predict_after_timesteps: 5
+
+savestat: True
+delete_temporary_files: True
+plotstat: True
+
+path_GCN_input: <_io.BufferedWriter name='../004_data/GCN_input/20210806-12h09m33s_timesteps12_ec3500_em7000.pkl'>
+path_GIF: ../004_data/gifs/20210806-12h09m33s_em7000_ec3500_opt_3_graph.gif

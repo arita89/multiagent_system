@@ -1,0 +1,18 @@
+<routes>
+ <routeDistribution id="routedist2">
+        <route id="route0" color="green" edges="1i 1o" probability="0.15"/>
+	<route id="route1" color="orange" edges="1i 2o" probability="0.3"/>
+	<route id="route2" color="blue" edges="1i 4o" probability="0.25"/>
+	<route id="route3" color="yellow" edges="2i 1o" probability="0.3"/>
+	<route id="route3" color="yellow" edges="2i 3o" probability="0.3"/>
+	<route id="route4" color="white" edges="2i 4o" probability="0.3"/>
+	<route id="route5" color="yellow" edges="3i 2o" probability="0.2"/>
+	<route id="route6" color="yellow" edges="3i 4o" probability="0.2"/>
+	<route id="route7" color="gray" edges="4i 1o" probability="0.3"/>
+	<route id="route7" color="gray" edges="4i 2o" probability="0.3"/>
+	<route id="route7" color="gray" edges="4i 3o" probability="0.3"/>
+
+ </routeDistribution>
+
+<flow id="flow1" begin="0" end="100000" probability="0.05" route="routedist2"/>
+</routes>

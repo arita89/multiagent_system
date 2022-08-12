@@ -1,0 +1,11 @@
+<additional>
+  <tlLogic id="0" type="static" programID="traffic_lights" offset="0">
+   <phase duration="33" state="GGGrrrGGGGrrrrrr"/>
+   <phase duration="6" state="yyyrrryyyyrrrrrr"/>
+   <phase duration="33" state="rrrGGGrrrrrrrrrr"/>
+   <phase duration="6" state="rrryyyrrrrrrrrrr"/>
+   <phase duration="33" state="rrrrrrrrrrGGGGGG"/>
+   <phase duration="6" state="rrrrrrrrrryyyyyy"/>
+ </tlLogic>
+
+</additional>

@@ -1,0 +1,56 @@
+input_file_name: 20210710-20h38m27s_timesteps14930_ec3500_em7000
+max_num_veh: 10
+sim_duration_timesteps: 15000
+train_size: 0.9
+batch_size: 512
+Nepochs: 5000
+run_date: 20210726-
+run_time: 11h58m27s
+model: GCN_014
+combo: ('sum', 512, 'Adam', 'L1', [128, 256, 64], 0.001, 0.6, 0, 'CosineAnnealingWarmRestarts', False, 'relu')
+random_seed: 42
+save_every: 250
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+use_edges_attr: False
+activation_function: relu
+shuttle_train_frame: 13313
+shuttle_val_frame: 4253
+num_rows_training: 10588
+num_rows_validation: 1059
+num_rows_test: 118
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 6
+size_output: 3
+model_architecture: GCN_HL03_bn_relu(
+  (conv1): GraphConv(6, 128)
+  (conv2): GraphConv(128, 256)
+  (conv3): GraphConv(256, 64)
+  (conv4): GraphConv(64, 3)
+  (bn1): GraphNorm(128)
+  (bn2): GraphNorm(256)
+  (bn3): GraphNorm(64)
+)
+hidden_layers_sizes: [128, 256, 64]
+criterion: L1Loss()
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 5.5845868874357386e-06
+    weight_decay: 0
+)
+reduction: sum
+scheduler: CosineAnnealingWarmRestarts
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_014/20210726-11h58m27s/20210726-11h58m27sEPOCH_1250of5000_TEMP__GCN_014.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_014/20210726-11h58m27s/20210726-11h58m27sEPOCH_1250of5000_TEMP__TEMP__training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_014/20210726-11h58m27s/20210726-11h58m27sEPOCH_1250of5000_TEMP__TEMP__validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_014/20210726-11h58m27s/20210726-11h58m27sEPOCH_1250of5000_TEMP__TEMP__learning_rate.pkl
+final_train_loss: 1363.0409574962798
+final_val_loss: 1939.7194010416667

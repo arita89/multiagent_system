@@ -1,0 +1,15 @@
+We worked very close together on project, presentation and report. 
+Therefore, we almost daily updated us regarding further developments and the current state. 
+In addition we had 2-3 times a week meetings where we discussed the further procedure or talked about challenges faced during the project. 
+
+Luise:
+- defining simple sumo crossing appropriate for our task
+- model with traffic light information
+- normalization and standardization transformations
+
+Arianna:
+- tuning edge weight calculation
+- model with classification head
+- handeling domain specific loss
+
+* things that are not mentioned in the list above were done togheter, meaning both of us have worked on it

@@ -1,0 +1,5 @@
+only if this is actually needed.
+possibly so due to the fact we need two different env to run the full code
+
+for now config.py still loads one big import file
+only xml functions and _00_df_from_sumo use their own imports

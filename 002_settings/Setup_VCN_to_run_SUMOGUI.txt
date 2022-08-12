@@ -1,0 +1,66 @@
+-------------------------------------------------------------------------------------------
+## Guide to Connect to Server ?atcremers50" through VNC Viewer and work with SUMO graphical user interface
+
+Following commands have to be run either on:
+Local machine (local), your own computer
+Remote host (host), atcremers50 , usually in command line
+
+required installations:
+*carla (host) - need the proper environment set up
+*sumo 1.4.0 (host) - installed 
+*sumo-gui (host)- installed 
+*netedit (host)- installed 
+*vnc (eg realVNC, depends on the os of the local machine) (local)
+*x terminal (eg XQuartz, depends on the os of the local machine)  (local)
+
+------------------------------------------------------------------------------------------
+# (local) open terminal and run 
+# this connects port 2000 on host to 2000 on local (no idea why it is needed, probably not)
+> ssh -p 58022 s0014@atcremers50.informatik.tu-muenchen.de -NL 2000:localhost:2000
+
+# tells ssh to connect on port 58022, which is a security feature (non standard port on host for listening to incoming ssh requests, usually it is port 22)
+# this needs to be done every time before you connect with vnc!
+> ssh -L 5910:localhost:5910 s0014@atcremers50.in.tum.de -p 58022
+> ssh -L 5911:localhost:5911 s0014@atcremers50.in.tum.de -p 58022
+ 
+# on the host initialize a X server, which draws output to display number 10 (usually on port 5910)
+# any time the x server is gone (broken pipe error, disconnected or something similar), you need to start it again on the host.
+# so here the command to start it in background mode &
+> xinit /usr/bin/startxfce4 -- :10 &
+
+# redirects display port 10 to autoport 5910 and allo vnc in backgrond mode (this is where the display runs :10 = port 5910)
+#> x11vnc -display :10 -autoport 5910 &
+> x11vnc -display :10 -autoport 5910  -forever&
+
+
+# (local) open local VNC viewer 
+# type  localhost:10 and connect
+# you should see atcremers50 remote desktop!
+
+
+# (host-desktop) open the terminal
+> tmux
+> ctrl+b + %
+
+#on one tmux page 
+> xterm
+# pops another terminal window
+# without this the town from carla doesnt load
+# on (host-popped up terminal)
+> cd /storage/remote/atcremers50/ss21_multiagentcontrol/Carla_0.9.11/
+> conda activate <ENV_WITH_CARLA>
+> DISPLAY= ./CarlaUE4.sh -opengl
+
+# on the other tmux page
+# go in carla folder 
+>cd /storage/remote/atcremers50/ss21_multiagentcontrol/Carla_0.9.11/PythonAPI/util
+# and load town
+>python3 config.py --map Town04
+# go to sumo folder
+>cd ../../Co-Simulation/Sumo/
+# and run 
+>python3 run_synchronization.py examples/Town04.sumocfg  --sumo-gui
+
+# the SUMO-GUI should open in all its glory
+# in the edit options of SUMO-GUI there is the button "open in netedit" 
+

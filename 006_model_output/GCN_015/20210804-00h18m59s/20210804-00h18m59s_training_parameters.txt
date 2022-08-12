@@ -1,0 +1,78 @@
+input_file_name: 20210710-20h38m27s_timesteps14930_ec3500_em7000
+max_num_veh: 10
+sim_duration_timesteps: 15000
+run_date: 20210804-
+run_time: 00h18m59s
+model: GCN_015
+combo: ('sum', 128, 'Adam', 'L1', [64, 128, 256], 0.01, 0.6, 0, 'CosineAnnealingWarmRestarts', True, 'leaky_relu')
+random_seed: 42
+train_size: 0.9
+batch_size: 128
+Nepochs: 800
+save_every: 80
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+use_edges_attr: True
+activation_function: leaky_relu
+shuttle_train_frame: 12481
+shuttle_val_frame: 4253
+num_rows_training: 10588
+num_rows_validation: 1059
+num_rows_test: 118
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 6
+size_output: 2
+model_architecture: GCN_HL03_bn_relu(
+  (conv1): GraphConv(6, 64)
+  (conv2): GraphConv(64, 128)
+  (conv3): GraphConv(128, 256)
+  (conv4): GraphConv(256, 2)
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): LeakyReLU(negative_slope=0.01)
+)
+hidden_layers_sizes: [64, 128, 256]
+criterion: L1Loss()
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.01
+    lr: 3.2200260184075406e-05
+    weight_decay: 0
+)
+reduction: sum
+scheduler: CosineAnnealingWarmRestarts
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/20210804-00h18m59sEPOCH_800of800_FINAL__GCN_015.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/20210804-00h18m59sEPOCH_800of800_FINAL__FINAL__training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/20210804-00h18m59sEPOCH_800of800_FINAL__FINAL__validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/20210804-00h18m59sEPOCH_800of800_FINAL__FINAL__learning_rate.pkl
+epoch80_train_loss: 1233.1352671427899
+epoch80_final_val_loss: 1601.4083150227864
+figure_paths: ['/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000080of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000080of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000160of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000160of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000240of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000240of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000320of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000320of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000400of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000400of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000480of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000480of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000560of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000560of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000640of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000640of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000720of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000720of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_training_set/20210804-00h18m59sModel_GCN_015_shuttle_train_epoch_000800of800.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210804-00h18m59s/figures_validation_set/20210804-00h18m59sModel_GCN_015_shuttle_val_epoch_000800of800.png']
+epoch160_train_loss: 1103.2615224079914
+epoch160_final_val_loss: 2004.7160780164932
+epoch240_train_loss: 793.3079260400979
+epoch240_final_val_loss: 1803.5780639648438
+epoch320_train_loss: 783.5634500894201
+epoch320_final_val_loss: 2050.9848904079863
+epoch400_train_loss: 711.3487478968609
+epoch400_final_val_loss: 1783.6421847873264
+epoch480_train_loss: 566.7878940076713
+epoch480_final_val_loss: 1684.7188279893662
+epoch560_train_loss: 527.7950979945172
+epoch560_final_val_loss: 1795.5667114257812
+epoch640_train_loss: 447.8142611951713
+epoch640_final_val_loss: 1582.155809190538
+epoch720_train_loss: 391.54827513177713
+epoch720_final_val_loss: 1688.4486083984375
+epoch800_train_loss: 375.7313864834337
+epoch800_final_val_loss: 1687.17042711046
+final_train_loss: 375.7313864834337
+final_val_loss: 1687.17042711046

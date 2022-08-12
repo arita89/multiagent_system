@@ -1,0 +1,29 @@
+#========== CREATE ENVIRONMENTS FROM YAML FILES ========== 
+## The yaml files for the enviroments are under "./settings"
+## create a yaml file, try to have a name that is 1:1 to the env itself possibly 
+> conda activate <environment_to_export>
+> cd ./settings
+
+## when moving env across platforms ( eg from osx to linux or viceversa)
+## exporting env must be done without platform specific build constraints
+## see https://stackoverflow.com/questions/55554431/conda-fails-to-create-environment-from-yml
+> conda env export —no-builds > <yaml_file>.yml
+
+## re-create the env from the yaml file
+# note that the first line of the yml file will name the new environment
+# if you want to name smth different just add --name <a_different_name>
+> cd ./settings
+> conda env create -f  <yaml_file>.yml 
+or
+> conda env create --name <a_different_name> -f  <yaml_file>.yml
+for example
+> conda env create --name p37_GCN_GPU -f  environment_for_GPU_use.yml
+> conda env create --name carla_sumo_env -f  carla_sumo_env_copy.yml
+
+#========== ACTIVATE THE RIGHT ENVIRONMENT ========== 
+## to run sumo simulation on the server (in synch with carla): 
+> conda activate carla_sumo_env
+
+## to run the rest of the code:
+> conda activate p37_GCN_GPU (with GPU) <--- suggested
+> conda activate p37_GCN (without GPU)

@@ -1,0 +1,1 @@
+Plots with number of vehicles per each frame of the simulation (blue) and number of collisions (red)

@@ -1,0 +1,81 @@
+input_file_name: 20210807-14h52m34s_timesteps2000_ec3500_em7000
+max_num_veh: 5
+sim_duration_timesteps: 2000
+run_date: 20210807-
+run_time: 15h05m47s
+model: GCN_015
+combo: ('sum', 256, 'Adam', 'L1', [64, 128, 256], 0.01, 0.9, 0, 'CosineAnnealingWarmRestarts', True, 'leaky_relu')
+random_seed: 42
+train_size: 0.9
+batch_size: 256
+Nepochs: 1000
+save_every: 100
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+use_edges_attr: True
+activation_function: leaky_relu
+shuttle_train_frame: 1798
+shuttle_val_frame: 166
+num_rows_training: 1476
+num_rows_validation: 147
+num_rows_test: 17
+dateset_train_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/DATASETS/20210807-14h52m34s_timesteps2000_ec3500_em7000_1476_IN_data_pos_zc_data_x_OUT_data_y_zc__dataset_01_train.pt
+dateset_val_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/DATASETS/20210807-14h52m34s_timesteps2000_ec3500_em7000_1476_IN_data_pos_zc_data_x_OUT_data_y_zc__dataset_02_validation.pt
+dateset_test_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/DATASETS/20210807-14h52m34s_timesteps2000_ec3500_em7000_1476_IN_data_pos_zc_data_x_OUT_data_y_zc__dataset_03_test.pt
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 7
+size_output: 2
+model_architecture: GCN_HL03_bn_relu(
+  (conv1): GraphConv(7, 64)
+  (conv2): GraphConv(64, 128)
+  (conv3): GraphConv(128, 256)
+  (conv4): GraphConv(256, 2)
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): LeakyReLU(negative_slope=0.01)
+)
+hidden_layers_sizes: [64, 128, 256]
+criterion: L1Loss()
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.01
+    lr: 0.0025000000000000144
+    weight_decay: 0
+)
+reduction: sum
+scheduler: CosineAnnealingWarmRestarts
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/20210807-15h05m47sEPOCH_1000of1000_FINAL__GCN_015.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/20210807-15h05m47sEPOCH_1000of1000_FINAL__FINAL__training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/20210807-15h05m47sEPOCH_1000of1000_FINAL__FINAL__validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/20210807-15h05m47sEPOCH_1000of1000_FINAL__FINAL__learning_rate.pkl
+epoch100_train_loss: 5890.128499348958
+epoch100_final_val_loss: 3517.462646484375
+figure_paths: ['/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000100of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000100of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000200of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000200of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000300of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000300of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000400of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000400of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000500of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000500of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000600of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000600of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000700of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000700of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000800of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000800of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_000900of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_000900of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_training_set/20210807-15h05m47sModel_GCN_015_shuttle_train_epoch_001000of1000.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_015/20210807-15h05m47s/figures_validation_set/20210807-15h05m47sModel_GCN_015_shuttle_val_epoch_001000of1000.png']
+epoch200_train_loss: 4021.776082356771
+epoch200_final_val_loss: 3106.79638671875
+epoch300_train_loss: 1605.0653279622395
+epoch300_final_val_loss: 1701.49365234375
+epoch400_train_loss: 1606.9698893229167
+epoch400_final_val_loss: 1697.89306640625
+epoch500_train_loss: 2339.043416341146
+epoch500_final_val_loss: 2108.33544921875
+epoch600_train_loss: 977.0583902994791
+epoch600_final_val_loss: 1394.410400390625
+epoch700_train_loss: 1218.3427124023438
+epoch700_final_val_loss: 1494.96337890625
+epoch800_train_loss: 1914.8159586588542
+epoch800_final_val_loss: 1703.1568603515625
+epoch900_train_loss: 749.0348307291666
+epoch900_final_val_loss: 1347.072509765625
+epoch1000_train_loss: 929.4681193033854
+epoch1000_final_val_loss: 1327.552734375
+final_train_loss: 929.4681193033854
+final_val_loss: 1327.552734375

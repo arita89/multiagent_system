@@ -1,0 +1,37 @@
+run_time: 10h48m33s
+model: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_006/20210711-10h48m33s/20210711-10h48m33sEPOCH_10of10_FINAL__GCN_006.pt
+random_seed: 42
+train_size: 0.9
+batch_size: 256
+Nepochs: 10
+save_every: 5
+transformstat: False
+plotstat: True
+printstat: True
+input_file_name: 20210710-13h21m45s_timesteps15000_ec3500_em7000
+num_rows_training: 9094
+num_rows_validation: 909
+num_rows_test: 102
+exclude_yaw: True
+concatenatestat: True
+paddingstat: False
+size_input: [(256, 4)]
+size_output: [(256, 2)]
+model_architecture: GCN(
+  (conv1): GCNConv(4, 16)
+  (conv2): GCNConv(16, 2)
+)
+criterion: MSELoss()
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    weight_decay: 0
+)
+train: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_006/20210711-10h48m33s/20210711-10h48m33sEPOCH_10of10_FINAL__FINAL__training_loss.pkl
+val: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_006/20210711-10h48m33s/20210711-10h48m33sEPOCH_10of10_FINAL__FINAL__validation_loss.pkl
+lr: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_006/20210711-10h48m33s/20210711-10h48m33sEPOCH_10of10_FINAL__FINAL__learning_rate.pkl
+final_train_loss: 1626.838174874442
+final_val_loss: 1635.4749380258413

@@ -1,0 +1,5 @@
+GCN_015: MLP with TL information
+GCN_018: GCN performing regression
+GCN_020: MLP with “still vehicle” and “acceleration” columns
+GCN_022: GCN with classification+regression
+Others> all the other previous attempts and sandbox notebooks

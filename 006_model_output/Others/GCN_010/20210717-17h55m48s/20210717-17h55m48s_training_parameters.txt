@@ -1,0 +1,42 @@
+input_file_name: 20210711-17h59m44s_timesteps30000_ec3500_em7000
+max_num_veh: 10
+sim_duration_timesteps: 30000
+run_time: 17h55m48s
+model: GCN_010
+random_seed: 457362
+train_size: 0.9
+batch_size: 16
+Nepochs: 300
+save_every: 150
+transformstat: False
+plotstat: True
+printstat: False
+intentionstat: obsoleted
+num_rows_training: 22478
+num_rows_validation: 2248
+num_rows_test: 250
+exclude_yaw: obsoleted
+concatenatestat: obsoleted
+paddingstat: obsoleted
+size_input: 6
+size_output: 2
+model_architecture: GCN(
+  (conv1): GCNConv(6, 16)
+  (conv2): GCNConv(16, 2)
+)
+criterion: L1Loss()
+optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    weight_decay: 0
+)
+model_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/20210717-17h55m48sEPOCH_300of300_FINAL__GCN_010.pt
+train_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/20210717-17h55m48sEPOCH_300of300_FINAL__FINAL__training_loss.pkl
+val_losses_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/20210717-17h55m48sEPOCH_300of300_FINAL__FINAL__validation_loss.pkl
+lr_path: /storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/20210717-17h55m48sEPOCH_300of300_FINAL__FINAL__learning_rate.pkl
+figure_paths: ['/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/figures/20210717-17h55m48sModel_GCN_010_epoch_060of300.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/figures/20210717-17h55m48sModel_GCN_010_epoch_120of300.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/figures/20210717-17h55m48sModel_GCN_010_epoch_180of300.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/figures/20210717-17h55m48sModel_GCN_010_epoch_240of300.png', '/storage/remote/atcremers50/ss21_multiagentcontrol/006_model_output/GCN_010/20210717-17h55m48s/figures/20210717-17h55m48sModel_GCN_010_epoch_300of300.png']
+final_train_loss: 10.121191313597656
+final_val_loss: 10.074350110182525
