@@ -1,5 +1,5 @@
 # course intellisys_ss2021
-repo for project Lab course  Learning for Autonomous Driving 
+repo for project course [Deep Learning for Autonomous Driving](https://vision.in.tum.de/teaching/ss2021/intellisys_ss2021) 
 
 ## Authors
 s0014, s0017
